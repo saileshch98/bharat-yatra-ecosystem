@@ -7,22 +7,13 @@
 <style>
 body{
 margin:0;
-font-family:Arial;
-background:#ffffff;
-}
-
-.loader{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:white;
 display:flex;
 justify-content:center;
 align-items:center;
+height:100vh;
+background:#ffffff;
+font-family:Arial;
 flex-direction:column;
-z-index:9999;
 }
 
 .spinner{
@@ -39,34 +30,20 @@ margin-bottom:20px;
 0%{transform:rotate(0deg);}
 100%{transform:rotate(360deg);}
 }
-
-iframe{
-width:100%;
-height:100vh;
-border:none;
-display:none;
-}
 </style>
+
+<script>
+setTimeout(function(){
+window.location.href = "https://www.figma.com/make/YzkP7dETdQnPaU0lVfduLd/Design-Bharat-Yatra-Platform?fullscreen=1&t=34HfhFNy2fqtW4jC-1";
+},2500);
+</script>
 
 </head>
 
 <body>
 
-<div class="loader" id="loader">
 <div class="spinner"></div>
-<h2>Connecting to Bharat Yatra servers...</h2>
-</div>
-
-<iframe id="app"
-src="https://www.figma.com/make/YzkP7dETdQnPaU0lVfduLd/Design-Bharat-Yatra-Platform?fullscreen=1&t=34HfhFNy2fqtW4jC-1">
-</iframe>
-
-<script>
-setTimeout(function(){
-document.getElementById("loader").style.display="none";
-document.getElementById("app").style.display="block";
-},2500);
-</script>
+<h2>Launching Bharat Yatra Platform...</h2>
 
 </body>
 </html>
