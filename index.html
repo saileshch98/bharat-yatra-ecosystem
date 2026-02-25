@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Bharat Yatra</title>
+
+<style>
+body{
+margin:0;
+font-family:Arial;
+background:#ffffff;
+}
+
+.loader{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:white;
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+z-index:9999;
+}
+
+.spinner{
+border:6px solid #f3f3f3;
+border-top:6px solid #FF7A00;
+border-radius:50%;
+width:60px;
+height:60px;
+animation:spin 1s linear infinite;
+margin-bottom:20px;
+}
+
+@keyframes spin{
+0%{transform:rotate(0deg);}
+100%{transform:rotate(360deg);}
+}
+
+iframe{
+width:100%;
+height:100vh;
+border:none;
+display:none;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="loader" id="loader">
+<div class="spinner"></div>
+<h2>Connecting to Bharat Yatra servers...</h2>
+</div>
+
+<iframe id="app"
+src="https://www.figma.com/make/YzkP7dETdQnPaU0lVfduLd/Design-Bharat-Yatra-Platform?fullscreen=1&t=34HfhFNy2fqtW4jC-1">
+</iframe>
+
+<script>
+setTimeout(function(){
+document.getElementById("loader").style.display="none";
+document.getElementById("app").style.display="block";
+},2500);
+</script>
+
+</body>
+</html>
